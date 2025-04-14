@@ -1,5 +1,5 @@
 import time
-from player import HumanPlayer, RandomPlayer
+from player import HumanPlayer, RandomPlayer, GeniusPlayer
 
 class TicTacToe:
     def __init__(self):
@@ -92,13 +92,31 @@ def play(game, x_player, o_player, print_game=True):
             letter = 'O' if letter == 'X' else 'X' 
 
         #tiny break to smooth out the game
-        time.sleep(0.8)
+        if print_game:
+            time.sleep(0.8)
 
     if print_game:
             print('It\'s a tie!') 
 
 if __name__ == '__main__':
-    x_player = HumanPlayer('x')
-    o_player = RandomPlayer('o')
-    t = TicTacToe()
-    play(t, x_player, o_player, print_game = True)
+    x_wins = 0
+    o_wins = 0
+    ties = 0
+    game_reps = 10 # how many games you want to play in a row
+    for _ in range(game_reps): 
+        # change x_player and/or o_player to HumanPlayer to play as yourself, RandomPlayer to play against a random "AI", or GeniusPlayer to play against a genius "AI"
+        # you can have the "AI" play against itself by making both players GeniusPlayer and/or RandomPlayer
+        # you can have the genius "AI" play against the random "AI" by making one GeniusPlayer and the other RandomPlayer
+        # x_player goes first, so if you want to go first, make sure to make x_player HumanPlayer
+        x_player = RandomPlayer('X')
+        o_player = GeniusPlayer('O')
+        t = TicTacToe()
+        result = play(t, x_player, o_player, print_game = False)
+        if result == 'X':
+            x_wins += 1
+        elif result == 'O':
+            o_wins += 1
+        else:
+            ties += 1
+
+    print(f'After {game_reps} games we see : X wins: {x_wins}, O wins: {o_wins}, Ties: {ties}')
