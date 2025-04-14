@@ -35,6 +35,14 @@ A digital version of the classic hand game. The player competes against the comp
 - Determines the winner based on game rules.
 - Option to play multiple rounds.
 
+### 5. Easy Tic-Tac-Toe
+A simple implementation of the classic Tic-Tac-Toe game where the player competes against the computer.
+
+**Features:**
+- 3x3 grid display.
+- Player vs. computer gameplay.
+- Checks for win, lose, or draw conditions.
+
 ## How to Run
 1. Clone the repository.
 2. Navigate to the desired game folder.
