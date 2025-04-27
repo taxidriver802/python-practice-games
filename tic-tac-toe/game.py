@@ -7,8 +7,8 @@ class TicTacToe:
         self.current_winner = None # keep track of winner!
     
     def print_board(self):
-        for row in [self.board[i*3:(i+1)*3] for i in range(3)]:
-            print('| ' + ' | '.join(row) + ' |')
+        for i, row in enumerate([self.board[i*3:(i+1)*3] for i in range(3)]):
+            print('| ' + ' | '.join([f"\033[93m{i * 3 + j}\033[0m" if spot == ' ' else spot for j, spot in enumerate(row)]) + ' |')
 
         
     @staticmethod
@@ -102,16 +102,16 @@ if __name__ == '__main__':
     x_wins = 0
     o_wins = 0
     ties = 0
-    game_reps = 10 # how many games you want to play in a row
+    game_reps = 5 # how many games you want to play in a row
     for _ in range(game_reps): 
         # change x_player and/or o_player to HumanPlayer to play as yourself, RandomPlayer to play against a random "AI", or GeniusPlayer to play against a genius "AI"
         # you can have the "AI" play against itself by making both players GeniusPlayer and/or RandomPlayer
         # you can have the genius "AI" play against the random "AI" by making one GeniusPlayer and the other RandomPlayer
         # x_player goes first, so if you want to go first, make sure to make x_player HumanPlayer
-        x_player = RandomPlayer('X')
+        x_player = HumanPlayer('X')
         o_player = GeniusPlayer('O')
         t = TicTacToe()
-        result = play(t, x_player, o_player, print_game = False)
+        result = play(t, x_player, o_player, print_game = True)
         if result == 'X':
             x_wins += 1
         elif result == 'O':
