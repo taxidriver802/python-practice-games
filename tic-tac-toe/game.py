@@ -108,8 +108,8 @@ if __name__ == '__main__':
         # you can have the "AI" play against itself by making both players GeniusPlayer and/or RandomPlayer
         # you can have the genius "AI" play against the random "AI" by making one GeniusPlayer and the other RandomPlayer
         # x_player goes first, so if you want to go first, make sure to make x_player HumanPlayer
-        x_player = HumanPlayer('X')
-        o_player = GeniusPlayer('O')
+        x_player = RandomPlayer('X')
+        o_player = RandomPlayer('O')
         t = TicTacToe()
         result = play(t, x_player, o_player, print_game = True)
         if result == 'X':
@@ -120,3 +120,6 @@ if __name__ == '__main__':
             ties += 1
 
     print(f'After {game_reps} games we see : X wins: {x_wins}, O wins: {o_wins}, Ties: {ties}')
+
+
+
