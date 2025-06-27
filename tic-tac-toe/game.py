@@ -102,16 +102,27 @@ if __name__ == '__main__':
     x_wins = 0
     o_wins = 0
     ties = 0
-    game_reps = 5 # how many games you want to play in a row
-    for _ in range(game_reps): 
-        # change x_player and/or o_player to HumanPlayer to play as yourself, RandomPlayer to play against a random "AI", or GeniusPlayer to play against a genius "AI"
-        # you can have the "AI" play against itself by making both players GeniusPlayer and/or RandomPlayer
-        # you can have the genius "AI" play against the random "AI" by making one GeniusPlayer and the other RandomPlayer
-        # x_player goes first, so if you want to go first, make sure to make x_player HumanPlayer
-        x_player = RandomPlayer('X')
-        o_player = RandomPlayer('O')
+    game_reps = 5  # number of games to play in a row
+
+    # 🧠 Player Configuration Guide:
+    # - HumanPlayer: you play manually via terminal input
+    # - RandomPlayer: basic AI that picks random moves
+    # - GeniusPlayer: unbeatable AI using minimax algorithm
+
+    # You can mix and match players:
+    # - Play against random AI:        x_player = HumanPlayer('X'), o_player = RandomPlayer('O')
+    # - Play against genius AI:        x_player = HumanPlayer('X'), o_player = GeniusPlayer('O')
+    # - Watch AI vs. AI (random):      x_player = RandomPlayer('X'), o_player = RandomPlayer('O')
+    # - Watch smart AI vs. random AI:  x_player = GeniusPlayer('X'), o_player = RandomPlayer('O')
+    # - Watch smart AI vs. smart AI:   x_player = GeniusPlayer('X'), o_player = GeniusPlayer('O')
+
+    # NOTE: X always goes first. Set yourself as x_player if you want to go first.
+    x_player = HumanPlayer('X')
+    o_player = RandomPlayer('O')
+
+    for _ in range(game_reps):
         t = TicTacToe()
-        result = play(t, x_player, o_player, print_game = True)
+        result = play(t, x_player, o_player, print_game=True)
         if result == 'X':
             x_wins += 1
         elif result == 'O':
@@ -120,6 +131,3 @@ if __name__ == '__main__':
             ties += 1
 
     print(f'After {game_reps} games we see : X wins: {x_wins}, O wins: {o_wins}, Ties: {ties}')
-
-
-

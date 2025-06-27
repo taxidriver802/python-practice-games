@@ -52,7 +52,7 @@ Play the classic game against the computer.
 ---
 
 ### 5. Tic-Tac-Toe
-**Run with:** `python tic_tac_toe/game.py`  
+**Run with:** `python tic-tac-toe/game.py`  
 Play against an AI opponent in this classic 3x3 grid game.
 
 **Features:**
