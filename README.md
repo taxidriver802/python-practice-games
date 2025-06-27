@@ -1,6 +1,8 @@
-# 🎮 Python Games Collection
+# 🎮 Python Practice Games
 
-This repository contains a collection of simple Python terminal games. Each game is designed to be fun and educational, showcasing foundational programming concepts like input handling, conditionals, loops, and basic AI.
+A collection of simple terminal-based Python games built as part of my early journey into programming. These projects helped me learn core Python concepts like conditionals, loops, input handling, and basic AI logic.
+
+> 🧠 Each game was built while following along with tutorials to solidify my understanding of the language and strengthen my problem-solving skills.
 
 ---
 
@@ -10,78 +12,79 @@ Each game can be run directly from the terminal.
 
 ### 1. Hangman
 **Run with:** `python hangman/hangman.py`  
-A classic word-guessing game where the player guesses letters one at a time.
+Guess the word one letter at a time before the stick figure is completed.
 
-**Features:**
-- Random word selection  
-- Tracks guessed letters  
-- Displays progress visually
+- ✅ Random word selection  
+- ✅ Tracks guessed letters  
+- ✅ Displays progress visually
 
 ---
 
 ### 2. Mad Libs
 **Run with:** `python madlibs/madlibs.py`  
-A word game where the player provides random words to fill in a story.
+Fill in the blanks to generate a random and often silly story.
 
-**Features:**
-- Prompts for user input  
-- Generates unique, funny stories
+- ✅ User input prompts  
+- ✅ Story generation using templates
 
 ---
 
 ### 3. Number Guessing Game
 **Run with:** `python number_guess/main.py`  
-Guess a random number within a range, with feedback after each attempt.
+Try to guess a randomly chosen number within a range.
 
-**Features:**
-- Adjustable number range  
-- Tracks number of attempts  
-- Hint system
+- ✅ Feedback after each guess  
+- ✅ Attempt counter  
+- ✅ Adjustable difficulty
 
 ---
 
 ### 4. Rock, Paper, Scissors
 **Run with:** `python rock_paper_scissors/RPS.py`  
-Play the classic game against the computer.
+Classic game against a random computer opponent.
 
-**Features:**
-- Random computer choice  
-- Score tracking  
-- Multiple rounds
+- ✅ Score tracking  
+- ✅ Multiple rounds  
+- ✅ Randomized computer moves
 
 ---
 
 ### 5. Tic-Tac-Toe
 **Run with:** `python tic-tac-toe/game.py`  
-Play against an AI opponent in this classic 3x3 grid game.
+Play the timeless 3x3 game against one of three AI types.
 
-**Features:**
-- Human vs Computer  
-- Win/draw detection  
-- Three AI types: `HumanPlayer`, `RandomPlayer`, `GeniusPlayer`
+- ✅ Human vs AI or AI vs AI  
+- ✅ Win/tie detection  
+- ✅ Smart `GeniusPlayer` AI using minimax logic
 
 ---
 
-## 🚀 How to Run Any Game
+## 🚀 Getting Started
 
-1. **Clone the repo**
+1. **Clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/python-games-collection.git
-   cd python-games-collection
+   git clone https://github.com/taxidriver802/python-practice-games.git
+   cd python-practice-games
    ```
 
-2. **Run any game using this command:**
+2. **Run a game like this:**
    ```bash
    python <game_folder>/<script_name>.py
    ```
 
-   **Example:**
+   _Example:_
    ```bash
    python hangman/hangman.py
    ```
 
-> 💡 Make sure you have Python 3 installed and are running commands from the project root folder.
+> 💡 Ensure Python 3 is installed and you're running commands from the project root.
 
 ---
 
-**Enjoy playing and feel free to explore the code!**
+## 🙌 About This Project
+
+These games represent my first steps into Python. I followed along with video guides and adapted the code to better understand how terminal games work, and how to build user interaction in code.
+
+---
+
+**🧪 Explore. Play. Modify. Learn.**
